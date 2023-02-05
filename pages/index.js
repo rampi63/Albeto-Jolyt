@@ -2,6 +2,8 @@ import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
+//import {Vercel} from "../assets/Vercel.js"
+import Vercel from '../assets/Vercel.js'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -35,6 +37,9 @@ export default function Home() {
                 height={24}
                 priority
               />
+              <div style={{width:"100px", height: "24px",filter: "invert(1)"}}>
+                <Vercel/>
+              </div>
             </a>
           </div>
         </div>
