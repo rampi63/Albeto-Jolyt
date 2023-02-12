@@ -25,7 +25,7 @@ export default function Home() {
           <Header isDark={isDark}/>
           <div className="flex justify-content-center align-items-center">
             <div className="w-6 flex justify-content-end pr-8">
-              <img src="/Saly-13.png"/>
+              <img src="Saly-13.png"/>
             </div>
             <div className="flex flex-column gap-5 w-6">
               <div className="font-25 font-bold flex gap-2">
