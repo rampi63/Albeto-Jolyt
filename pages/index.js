@@ -2,7 +2,6 @@ import "/node_modules/primeflex/primeflex.css"
 import "primereact/resources/themes/lara-light-indigo/theme.css";  //theme
 import "primereact/resources/primereact.min.css";                  //core css
 import "primeicons/primeicons.css";  
-import {Saly} from "../assets/images/Saly-13.png"
 
 import Head from "next/head";
 import Header from "@/components/Header";

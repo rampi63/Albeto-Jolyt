@@ -1,5 +1,5 @@
 .toggle-background{
-    background-image: url("../assets/images/sky.png");
+    background-image: url("../assets/imgNext/sky.png");
     width:93px;
     height:58px;
     border-radius:40px;
@@ -11,7 +11,7 @@
 }
 
 .toggle-background-active{
-    background-image: url("../assets/images/sky-night.png");
+    background-image: url("../assets/imgNext/sky-night.png");
     width:93px;
     height:58px;
     border-radius:40px;
@@ -24,7 +24,7 @@
 
 .toggle-mountain{
     height:58px;
-    background-image: url("../assets/images/bgButtonLight.png");
+    background-image: url("../assets/imgNext/bgButtonLight.png");
     background-position-y: 8px;
     background-size: contain;
     background-repeat: no-repeat;
@@ -33,7 +33,7 @@
 
 .toggle-mountain-active{
     height:58px;
-    background-image: url("../assets/images/bgButtonDark.png");
+    background-image: url("../assets/imgNext/bgButtonDark.png");
     background-position-y: 8px;
     background-size: contain;
     background-repeat: no-repeat;
