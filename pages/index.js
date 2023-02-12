@@ -6,11 +6,15 @@ import "primeicons/primeicons.css";
 import Head from "next/head";
 import Header from "@/components/Header";
 import { FontStyle } from "@/styles/fonts.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
   
-  const [isDark,setIsDark] = useState(true)
+  const [isDark,setIsDark] = useState()
+
+  useEffect(() => {
+    setIsDark(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? true : false)
+  },[])
   
   return (
     <>
@@ -20,10 +24,10 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
       </Head>
-      <div className={FontStyle()}>
+      <div className={FontStyle(isDark)}>
         <div className="banner">
-          <Header isDark={isDark}/>
-          <div className="flex justify-content-center align-items-center">
+          <Header isDark={isDark} setIsDark={setIsDark}/>
+          <div className="flex justify-content-center align-items-center pt-8">
             <div className="w-6 flex justify-content-end pr-8">
               <img src="Saly-13.png"/>
             </div>

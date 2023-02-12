@@ -1,7 +1,7 @@
 import Logo from "@/assets/svgComponents/Logo"
 import { ToggleCustom } from "./Toggle"
 
-const Header = ({isDark=true}) => {
+const Header = ({isDark=true,setIsDark}) => {
     return(
         <header className="w-full flex justify-content-around align-items-center" style={{height:"100px"}}>
             <div>
@@ -19,7 +19,7 @@ const Header = ({isDark=true}) => {
                 </div>
             </div>
             <div>
-                <ToggleCustom isDark={isDark}/>
+                <ToggleCustom isDark={isDark} setIsDark={setIsDark}/>
             </div>
         </header>
     )

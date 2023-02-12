@@ -1,8 +1,13 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
-export const ToggleCustom = ({isDark=true}) => {
+export const ToggleCustom = ({isDark=true,setIsDark}) => {
 
     const [isDarky,setIsDarky] = useState(isDark)
+
+    useEffect(() => {
+        if (typeof window === "undefined") return
+        setIsDark(isDarky)
+    },[isDarky])
     
     let togglePosition = !isDarky? {right: "4px"} : {right:"unset"}
     
