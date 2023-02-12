@@ -5,7 +5,7 @@ export const FontStyle = (isDark=true) => {
     let fontFamily = "font-family: 'Montserrat', sans-serif;"
     let fontGeneralColor = isDark? "color: #FFFFFF;" : "color: #000000;"
     let bgColor = isDark? "#1E1C29;" : "#fffff;"
-    let banner = isDark? "linear-gradient(to bottom, rgb(245 246 252 / 0%), rgb(30, 28, 41)), url(/_next/static/media/Background.62919cba.png);" : "linear-gradient(to bottom, rgb(245 246 252 / 0%), rgb(255 255 255)), url(/_next/static/media/Background.62919cba.png);"
+    let banner = isDark? "linear-gradient(to bottom, rgb(245 246 252 / 0%), rgb(30, 28, 41)), url(_next/static/media/Background.62919cba.png);" : "linear-gradient(to bottom, rgb(245 246 252 / 0%), rgb(255 255 255)), url(_next/static/media/Background.62919cba.png);"
 
     return css`
 
