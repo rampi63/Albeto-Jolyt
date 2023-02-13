@@ -4,7 +4,7 @@ import bg from "../assets/imgNext/Background.png"
 export const FontStyle = (isDark=true) => {
 
     let fontFamily = "font-family: 'Montserrat', sans-serif;"
-    let fontGeneralColor = isDark? "color: #FFFFFF;" : "color: #000000;"
+    let fontGeneralColor = isDark? "color: #FFFFFF !important;" : "color: #000000 !important;"
     let bgColor = isDark? "#1E1C29;" : "#EAEAEE;"
     let banner = isDark? "linear-gradient(to bottom, rgb(245 246 252 / 0%), rgb(30, 28, 41)), url(Background.png);" : "linear-gradient(to bottom, rgb(245 246 252 / 0%), rgb(234, 234, 238)), url(Background.png);"
 
@@ -39,6 +39,7 @@ export const FontStyle = (isDark=true) => {
 
         .sidebarMenu{
             font-size: 20px;
+            ${fontGeneralColor}
         }
 
         .sidebarMenuCV{
