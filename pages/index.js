@@ -125,6 +125,31 @@ export default function Home() {
 
               </div>
             </div>
+            <div className="projects-section">
+              <h2 className="text-center font-bold m-0">
+                Mis proyectos
+              </h2>
+              <div className="flex flex-column justify-content-center" style={{paddingTop: "12rem"}}>
+                <div className="flex w-full relative">
+                  <div className="mt-8">
+                    <div className="font-semibold" style={{color:"#00BFFF !important"}}>
+                      Front End Developer
+                    </div>
+                    <h3 className="font-bold m-0">
+                      Venntor
+                    </h3>
+                    <div className="card-project mt-4">
+                      <h6 className="font-normal m-0">
+                      Venn es una plataforma revolucionaria para maestros y profesores que ofrece una amplia variedad de opciones para brindar servicios educativos personalizados. Con Venn, los maestros pueden ofrecer Consultorías 1:1, Sesiones Live y Cursos Online Pre-Grabados, lo que permite a los estudiantes acceder a una amplia variedad de contenido educativo y desarrollarse profesionalmente de manera eficiente y efectiva.
+                      </h6>
+                    </div>
+                  </div>
+                  <div>
+                    <img src="venn.png" style={{maxWidth:"46rem",borderRadius: "8px"}}/>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

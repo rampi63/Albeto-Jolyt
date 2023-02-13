@@ -29,6 +29,10 @@ export const FontStyle = (isDark=true) => {
             font-size: 55px;
         }
 
+        h3{
+            font-size: 40px;
+        }
+
         h6{
             font-size: 24px;
         }
@@ -44,6 +48,10 @@ export const FontStyle = (isDark=true) => {
 
         .font-25{
             font-size: 25px;
+        }
+
+        .font-18{
+            font-size: 18px;
         }
 
         .banner{
@@ -69,6 +77,23 @@ export const FontStyle = (isDark=true) => {
 
             .tech-section{
                 padding-top: 15rem;
+            }
+
+            .projects-section{
+                padding-top: 20rem;
+                padding-bottom: 15rem;
+            }
+
+            .card-project {
+                max-width: 46rem;
+                height: auto;
+                padding: 2.5rem 2rem;
+                border-radius: 14px;
+                font-size: 1rem;
+                color:white;
+                background: rgba(255, 255, 255, 9%);
+                -webkit-backdrop-filter: blur(5px);
+                backdrop-filter: blur(5px);
             }
         }
     `
