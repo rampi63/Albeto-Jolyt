@@ -7,6 +7,11 @@ import Head from "next/head";
 import Header from "@/components/Header";
 import { FontStyle } from "@/styles/fonts.css";
 import { useEffect, useState } from "react";
+import Apollo_Icon from "@/assets/svgComponents/Apollo";
+import S3_Icon from "@/assets/svgComponents/AWS_S3";
+import AWX_Amplify from "@/assets/svgComponents/AWS_Amplify";
+import Laravel_Icon from "@/assets/svgComponents/Laravel_icon";
+import Javascript_Icon from "@/assets/svgComponents/Javascript_icon";
 
 export default function Home() {
   
@@ -46,13 +51,13 @@ export default function Home() {
                     Web developer
                   </span>
                   <br/>
-                  <span className="font-light">
+                  {/* <span className="font-light">
                     con habilidades en:
                   </span>
                   <br/>
                   <span className="font-bold">
                     React y Laravel
-                  </span>
+                  </span> */}
                 </h2>
                 <h6 className="m-0 font-light" style={{width:"60%"}}>
                   Destaco por mis habilidades de liderazgo en los proyectos y mi capacidad para conectar con los clientes para entender mejor sus necesidades.
@@ -67,7 +72,7 @@ export default function Home() {
               </h1>
               <div className="mt-8 card-first-section">
                 <h6 className="text-center font-normal m-0">
-                  Mi ágil aprendizaje ayuda a adaptarme rápidamente a nuevas tecnologías y tendencias en la industria, lo que me permite estar siempre actualizado y ofrecer soluciones innovadoras. Mi estilo de presentación se enfoca en la comunicación efectiva y la atención al detalle. Me entusiasma aprender y especializarme en liderazgo de proyectos para contribuir al crecimiento y éxito de un equipo y una empresa.
+                  Mi ágil aprendizaje ayuda a adaptarme rápidamente a nuevas tecnologías y tendencias en la industria, lo que me permite estar siempre actualizado y ofrecer soluciones innovadoras. Destaco por mi comunicación efectiva y la atención al detalle. Me entusiasma aprender y especializarme como lider de proyecto para contribuir al crecimiento y éxito de un equipo y una empresa.
                 </h6>
               </div>
             </div>
@@ -79,41 +84,41 @@ export default function Home() {
                 A lo largo de mi trayectoria he trabajado con diversas herramientas que han aumentado mis habilidades.
               </h6>
               <div className="flex gap-6 pt-8 justify-content-center">
-                <div style={{width:"73.77px",height:"73.77px", backgroundColor:"#3D1768",borderRadius:"50px"}}>
-
+                <div className="flex align-items-center justify-content-center" style={{width:"73.77px",height:"73.77px", backgroundColor:"#3D1768",borderRadius:"50px"}}>
+                  <Apollo_Icon/>
                 </div>
-                <div style={{width:"73.77px",height:"73.77px", backgroundColor:"#3D1768",borderRadius:"50px"}}>
-
+                <div className="flex align-items-center justify-content-center" style={{paddingRight: "2px",width:"73.77px",height:"73.77px", backgroundColor:"#3D1768",borderRadius:"50px"}}>
+                  <S3_Icon/>
                 </div>
-                <div style={{width:"73.77px",height:"73.77px", backgroundColor:"#3D1768",borderRadius:"50px"}}>
-
+                <div className="flex align-items-center justify-content-center" style={{paddingBottom: "4px", width:"73.77px",height:"73.77px", backgroundColor:"#3D1768",borderRadius:"50px"}}>
+                  <AWX_Amplify/>
                 </div>
-                <div style={{width:"73.77px",height:"73.77px", backgroundColor:"#3D1768",borderRadius:"50px"}}>
-
+                <div className="flex align-items-center justify-content-center" style={{width:"73.77px",height:"73.77px", backgroundColor:"#3D1768",borderRadius:"50px"}}>
+                  <img src="awsLamda.png" style={{paddingLeft:2, paddingRight: 2,width:"44.77px",height:"43.77px",filter: "invert(100%)"}}/>
                 </div>
-                <div style={{width:"73.77px",height:"73.77px", backgroundColor:"#3D1768",borderRadius:"50px"}}>
-
+                <div className="flex align-items-center justify-content-center" style={{width:"73.77px",height:"73.77px", backgroundColor:"#3D1768",borderRadius:"50px"}}>
+                  <img src="dbs_mongodb.png" style={{width:"53.77px",height:"53.77px",filter: "invert(100%)"}} />
                 </div>
-                <div style={{width:"73.77px",height:"73.77px", backgroundColor:"#3D1768",borderRadius:"50px"}}>
-
+                <div className="flex align-items-center justify-content-center" style={{width:"73.77px",height:"73.77px", backgroundColor:"#3D1768",borderRadius:"50px"}}>
+                  <img src="graphql-icon.png" style={{paddingLeft:2, paddingRight: 2,width:"46.77px",height:"50.77px",filter: "invert(100%)"}}/>
                 </div>
-                <div style={{width:"73.77px",height:"73.77px", backgroundColor:"#3D1768",borderRadius:"50px"}}>
-
+                <div className="flex align-items-center justify-content-center" style={{paddingLeft:3, paddingTop: 2,width:"73.77px",height:"73.77px", backgroundColor:"#3D1768",borderRadius:"50px"}}>
+                  <Laravel_Icon/>
                 </div>
-                <div style={{width:"73.77px",height:"73.77px", backgroundColor:"#3D1768",borderRadius:"50px"}}>
-
+                <div className="flex align-items-center justify-content-center" style={{width:"73.77px",height:"73.77px", backgroundColor:"#3D1768",borderRadius:"50px"}}>
+                  <Javascript_Icon/>
                 </div>
-                <div style={{width:"73.77px",height:"73.77px", backgroundColor:"#3D1768",borderRadius:"50px"}}>
-
+                <div className="flex align-items-center justify-content-center" style={{width:"73.77px",height:"73.77px", backgroundColor:"#3D1768",borderRadius:"50px"}}>
+                  <img src="mysql-logo.png" style={{paddingLeft:2, paddingRight: 2,width:"46.77px",height:"50.77px",filter: "invert(100%)"}}/>
                 </div>
-                <div style={{width:"73.77px",height:"73.77px", backgroundColor:"#3D1768",borderRadius:"50px"}}>
-
+                <div className="flex align-items-center justify-content-center" style={{width:"73.77px",height:"73.77px", backgroundColor:"#3D1768",borderRadius:"50px"}}>
+                  <img src="next-js.png" style={{paddingLeft:2, paddingRight: 2,width:"57.77px",height:"34.77px",filter: "invert(100%)"}}/>
                 </div>
-                <div style={{width:"73.77px",height:"73.77px", backgroundColor:"#3D1768",borderRadius:"50px"}}>
-
+                <div className="flex align-items-center justify-content-center" style={{width:"73.77px",height:"73.77px", backgroundColor:"#3D1768",borderRadius:"50px"}}>
+                  <img src="php-logo.png" style={{paddingLeft:2, paddingRight: 2,width:"57.77px",height:"56.77px",filter: "invert(100%)"}}/>
                 </div>
-                <div style={{width:"73.77px",height:"73.77px", backgroundColor:"#3D1768",borderRadius:"50px"}}>
-
+                <div className="flex align-items-center justify-content-center" style={{width:"73.77px",height:"73.77px", backgroundColor:"#3D1768",borderRadius:"50px"}}>
+                  <img src="react.png" style={{paddingLeft:2, paddingRight: 2,width:"53.77px",height:"52.77px",filter: "invert(100%)"}}/>
                 </div>
               </div>
               <div>

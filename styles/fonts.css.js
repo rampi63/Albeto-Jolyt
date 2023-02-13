@@ -5,8 +5,8 @@ export const FontStyle = (isDark=true) => {
 
     let fontFamily = "font-family: 'Montserrat', sans-serif;"
     let fontGeneralColor = isDark? "color: #FFFFFF;" : "color: #000000;"
-    let bgColor = isDark? "#1E1C29;" : "#fffff;"
-    let banner = isDark? "linear-gradient(to bottom, rgb(245 246 252 / 0%), rgb(30, 28, 41)), url(Background.png);" : "linear-gradient(to bottom, rgb(245 246 252 / 0%), rgb(255 255 255)), url(Background.png);"
+    let bgColor = isDark? "#1E1C29;" : "#EAEAEE;"
+    let banner = isDark? "linear-gradient(to bottom, rgb(245 246 252 / 0%), rgb(30, 28, 41)), url(Background.png);" : "linear-gradient(to bottom, rgb(245 246 252 / 0%), rgb(234, 234, 238)), url(Background.png);"
 
     return css`
 
@@ -61,9 +61,10 @@ export const FontStyle = (isDark=true) => {
 
             .card-first-section{
                 border-radius: 14px;
-                background-color: #262639;
+                background-color: ${isDark ? "#262639" : "#EAEAEE"};
                 padding: 1.5rem;
-                filter: drop-shadow(22px 17px 25px rgba(20, 78, 227, 0.1));
+                filter: drop-shadow(22px 17px 25px rgba(20, 78, 227, 0.2));
+                background-image: linear-gradient(315deg, #144ee30a 35%, #763cac2e 100%);
             }
 
             .tech-section{
