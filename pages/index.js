@@ -12,8 +12,10 @@ import S3_Icon from "@/assets/svgComponents/AWS_S3";
 import AWX_Amplify from "@/assets/svgComponents/AWS_Amplify";
 import Laravel_Icon from "@/assets/svgComponents/Laravel_icon";
 import Javascript_Icon from "@/assets/svgComponents/Javascript_icon";
-import Contacto_Dark from "@/assets/svgComponents/Contacto_Dark";
-import Contacto_Light from "@/assets/svgComponents/Contacto_Light";
+import { InputText } from 'primereact/inputtext';
+import { InputTextarea } from 'primereact/inputtextarea';
+import { Button } from 'primereact/button';                
+        
 
 export default function Home() {
   
@@ -29,11 +31,16 @@ export default function Home() {
       //console.log(sc)
       if(sc >= 4596){
         document.getElementById("Contact").className = "contact-active absolute"
-        document.getElementById("Form-Cont").className = "form-contact-active"
+        document.getElementById("Form-Cont").className = "form-contact-active w-full"
+
+        // setTimeout(() => {
+        //   document.getElementById("Contact").className = "contact-active absolute hidden"
+        // },400)
+
         //console.log("Me muestro")
       }else{
-        document.getElementById("Contact").className = "contact absolute"
-        document.getElementById("Form-Cont").className = "form-contact"
+        document.getElementById("Contact").className = "contact absolute flex"
+        document.getElementById("Form-Cont").className = "form-contact w-full"
         //console.log("No me muestro")
       }
     });
@@ -226,7 +233,29 @@ export default function Home() {
                 <div className="flex justify-content-center relative">
                     <img id="Contact" className="contact-active" src={isDark? "Contacto_Dark.png" : "Contacto_Light.png"}/>
                     <div id="Form-Cont" className="form-contact">
-                      hola mundo
+                      <form className="grid gap-6 justify-content-between form-inputs">
+                        <InputText
+                          placeholder="Nombre*"
+                          className="col-5"
+                        />
+                        <InputText
+                          placeholder="Email*"
+                          className="col-5"
+                        />
+                        <InputText
+                          placeholder="Teléfono*"
+                          className="col-12"
+                        />
+                        <InputTextarea
+                          placeholder="Mensaje*"
+                          autoResize
+                          rows={5} 
+                          cols={150}
+                        />
+                        <Button
+                          label="Enviar"
+                        />
+                      </form>
                     </div>
                 </div>
               </div>

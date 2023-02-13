@@ -3,7 +3,7 @@ import bg from "../assets/imgNext/Background.png"
 
 export const FontStyle = (isDark=true) => {
 
-    let fontFamily = "font-family: 'Montserrat', sans-serif;"
+    let fontFamily = "font-family: 'Montserrat', sans-serif !important;"
     let fontGeneralColor = isDark? "color: #FFFFFF !important;" : "color: #000000 !important;"
     let bgColor = isDark? "#1E1C29;" : "#EAEAEE;"
     let banner = isDark? "linear-gradient(to bottom, rgb(245 246 252 / 0%), rgb(30, 28, 41)), url(Background.png);" : "linear-gradient(to bottom, rgb(245 246 252 / 0%), rgb(234, 234, 238)), url(Background.png);"
@@ -15,10 +15,50 @@ export const FontStyle = (isDark=true) => {
 
         transition: all 0.4s ease;
 
+        .p-button {
+            color: #ffffff;
+            background: unset !important;
+            border: unset !important;
+            padding: 0.75rem 1.25rem;
+            transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+            border-radius: 6px;
+        }
+
+        .p-inputtext{
+            ${fontFamily}
+            ${fontGeneralColor}
+            font-size: 25px !important;
+            background-color: rgba(173, 80, 255, 0.1) !important;
+            border: unset !important;
+            border-radius: 19px !important;
+        }
+
+        .p-component{
+            ${fontFamily}
+            ${fontGeneralColor}
+            font-size: 25px !important;
+        }
+
+        .p-button-label {
+            font-weight: 400 !important;
+        }
+
+        .p-inputtext::placeholder{
+            ${fontFamily}
+            ${fontGeneralColor}
+            font-size: 25px !important;
+        }
+
+        .p-inputtext:enabled:focus {
+            outline: 0 none;
+            outline-offset: 0;
+            box-shadow: 0px 0px 44px 1px rgb(20 78 227 / 60%);
+            border-color: #6366F1;
+        }
+
         .bgAll{
             background-color: ${bgColor}
             transition: unset !important;
-            padding-bottom: 10rem;
         }
 
         h1{
@@ -115,6 +155,10 @@ export const FontStyle = (isDark=true) => {
         .form-contact{
             opacity: 0;
             transition: all 0.4s ease;
+        }
+
+        .form-inputs{
+            padding: 0rem 25rem;
         }
     `
 }
