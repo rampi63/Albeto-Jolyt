@@ -90,10 +90,10 @@ export const FontStyle = (isDark=true) => {
                 padding: 2.5rem 2rem;
                 border-radius: 14px;
                 font-size: 1rem;
-                color:white;
-                background: rgba(255, 255, 255, 9%);
+                background: ${isDark ? "#262639e0" : "#EAEAEEe0"};
                 -webkit-backdrop-filter: blur(5px);
                 backdrop-filter: blur(5px);
+                background-image: linear-gradient(315deg, #144ee30a 35%, #763cac2e 100%);
             }
         }
     `

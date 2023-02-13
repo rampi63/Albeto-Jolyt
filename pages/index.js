@@ -70,7 +70,7 @@ export default function Home() {
               <h1 className="first-section-title text-center m-0">
                 Soy capaz de crear interfaces y aplicaciones web de alta calidad
               </h1>
-              <div className="mt-8 card-first-section">
+              <div className="mt-6 card-first-section">
                 <h6 className="text-center font-normal m-0">
                   Mi ágil aprendizaje ayuda a adaptarme rápidamente a nuevas tecnologías y tendencias en la industria, lo que me permite estar siempre actualizado y ofrecer soluciones innovadoras. Destaco por mi comunicación efectiva y la atención al detalle. Me entusiasma aprender y especializarme como lider de proyecto para contribuir al crecimiento y éxito de un equipo y una empresa.
                 </h6>
@@ -129,13 +129,35 @@ export default function Home() {
               <h2 className="text-center font-bold m-0">
                 Mis proyectos
               </h2>
-              <div className="flex flex-column justify-content-center" style={{paddingTop: "12rem"}}>
-                <div className="flex w-full relative">
-                  <div className="mt-8">
+              <div className="flex flex-column justify-content-center " style={{paddingTop: "12rem", gap: "25rem"}}>
+                
+              <div className="flex w-full relative justify-content-center">
+                  <div className="mt-6 absolute" style={{marginRight:"35%",zIndex:"4"}}>
                     <div className="font-semibold" style={{color:"#00BFFF !important"}}>
-                      Front End Developer
+                      Full Stack Developer 
                     </div>
                     <h3 className="font-bold m-0">
+                      Mango pase
+                    </h3>
+                    <div className="card-project mt-4">
+                      <h6 className="font-normal m-0">
+                        Mango Pase es una solución innovadora para la compra y venta de boletos en línea para cualquier tipo de evento social. Ya sean eventos deportivos, conciertos, conferencias, festivales, etc.
+                      </h6>
+                    </div>
+                  </div>
+                  <div style={{marginLeft:"35%",zIndex:3}} className="relative">
+                    <img src="mango.png" style={{maxWidth:"46rem",borderRadius: "8px",width: "100%"}}/>
+                    <div className="absolute" style={{zIndex:-1,top:"0rem",maxWidth:"46rem",borderRadius: "500px",width: "60%",height:"95%",boxShadow:"rgb(118, 60, 172,0.50) 27px 20px 100px 35px"}}/>
+                    <div className="absolute" style={{zIndex:-1,top:"0rem",right:"2rem",maxWidth:"46rem",borderRadius: "500px",width: "60%",height:"95%",boxShadow:"rgb(20, 78, 227,0.50) 27px 20px 100px 35px"}}/>
+                  </div>
+                </div>
+
+                <div className="flex w-full relative justify-content-center">
+                  <div className="mt-6 absolute" style={{marginLeft:"35%",zIndex:"4"}}>
+                    <div className="font-semibold text-right" style={{color:"#00BFFF !important"}}>
+                      Front End Developer
+                    </div>
+                    <h3 className="font-bold m-0 text-right">
                       Venntor
                     </h3>
                     <div className="card-project mt-4">
@@ -144,10 +166,34 @@ export default function Home() {
                       </h6>
                     </div>
                   </div>
-                  <div>
-                    <img src="venn.png" style={{maxWidth:"46rem",borderRadius: "8px"}}/>
+                  <div style={{marginRight:"35%",zIndex:3}} className="relative">
+                    <img src="venn.png" style={{maxWidth:"46rem",borderRadius: "8px",width: "100%"}}/>
+                    <div className="absolute" style={{zIndex:-1,top:"0rem",maxWidth:"46rem",borderRadius: "500px",width: "60%",height:"95%",boxShadow:"rgb(20, 78, 227,0.50) 27px 20px 100px 35px"}}/>
+                    <div className="absolute" style={{zIndex:-1,top:"0rem",right:"2rem",maxWidth:"46rem",borderRadius: "500px",width: "60%",height:"95%",boxShadow:"rgb(118, 60, 172,0.50) 27px 20px 100px 35px"}}/>
                   </div>
                 </div>
+
+                <div className="flex w-full relative justify-content-center">
+                  <div className="mt-6 absolute" style={{marginRight:"35%",zIndex:"4"}}>
+                    <div className="font-semibold" style={{color:"#00BFFF !important"}}>
+                      Front End Developer
+                    </div>
+                    <h3 className="font-bold m-0">
+                      Abastero
+                    </h3>
+                    <div className="card-project mt-4">
+                      <h6 className="font-normal m-0">
+                        Abastero es un e-commerce para la compra y venta a mayoreo de frutas y verduras mexicanas que ayuda a los agropecuarios a tener ventas directas con los clientes finales.
+                      </h6>
+                    </div>
+                  </div>
+                  <div style={{marginLeft:"35%",zIndex:3}} className="relative">
+                    <img src="abastero.png" style={{maxWidth:"46rem",borderRadius: "8px",width: "100%"}}/>
+                    <div className="absolute" style={{zIndex:-1,top:"0rem",maxWidth:"46rem",borderRadius: "500px",width: "60%",height:"95%",boxShadow:"rgb(118, 60, 172,0.50) 27px 20px 100px 35px"}}/>
+                    <div className="absolute" style={{zIndex:-1,top:"0rem",right:"2rem",maxWidth:"46rem",borderRadius: "500px",width: "60%",height:"95%",boxShadow:"rgb(20, 78, 227,0.50) 27px 20px 100px 35px"}}/>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
