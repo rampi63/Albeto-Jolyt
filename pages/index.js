@@ -22,6 +22,22 @@ export default function Home() {
   useEffect(() => {
     setIsDark(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? true : false)
   },[])
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      let sc = window.pageYOffset
+      //console.log(sc)
+      if(sc >= 4596){
+        document.getElementById("Contact").className = "contact-active absolute"
+        document.getElementById("Form-Cont").className = "form-contact-active"
+        //console.log("Me muestro")
+      }else{
+        document.getElementById("Contact").className = "contact absolute"
+        document.getElementById("Form-Cont").className = "form-contact"
+        //console.log("No me muestro")
+      }
+    });
+  },[])
   
   return (
     <>
@@ -207,8 +223,11 @@ export default function Home() {
               </div>
 
               <div className="flex flex-column mt-8" style={{marginBottom:"25rem"}}>
-                <div className="flex justify-content-center">
-                    <img src={isDark? "Contacto_Dark.png" : "Contacto_Light.png"}/>
+                <div className="flex justify-content-center relative">
+                    <img id="Contact" className="contact-active" src={isDark? "Contacto_Dark.png" : "Contacto_Light.png"}/>
+                    <div id="Form-Cont" className="form-contact">
+                      hola mundo
+                    </div>
                 </div>
               </div>
 

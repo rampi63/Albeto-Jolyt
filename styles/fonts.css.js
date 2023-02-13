@@ -97,5 +97,24 @@ export const FontStyle = (isDark=true) => {
                 background-image: linear-gradient(315deg, #144ee30a 35%, #763cac2e 100%);
             }
         }
+
+        .contact-active{
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
+
+        .contact{
+            
+            transition: all 0.4s ease;
+        }
+
+        .form-contact-active{
+            transition: all 0.4s ease;
+        }
+
+        .form-contact{
+            opacity: 0;
+            transition: all 0.4s ease;
+        }
     `
 }
