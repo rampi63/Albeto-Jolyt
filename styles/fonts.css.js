@@ -39,7 +39,7 @@ export const FontStyle = (isDark=true) => {
 
         .sidebarMenu{
             font-size: 20px;
-            ${fontGeneralColor}
+            color: #FFFFFF !important;
         }
 
         .sidebarMenuCV{
