@@ -58,6 +58,17 @@ export default function Home() {
 
   const submit = (data) => {
     console.log("Data: ",data)
+
+    const serviceID = 'default_service';
+    const templateID = 'template_uvxk67s';
+
+    emailjs.send(serviceID, templateID, data).then(() => {
+        btn.value = 'Send Email';
+        alert('Sent!');
+      }, (err) => {
+        btn.value = 'Send Email';
+        alert(JSON.stringify(err));
+      });
   }
   
   return (
@@ -67,6 +78,12 @@ export default function Home() {
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
+        <script type="text/javascript"
+          src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+          emailjs.init('Mn39zD7EpoNEUi7i1')
+        </script>
       </Head>
       <div className={FontStyle(isDark)}>
         <div className="bgAll">
