@@ -15,6 +15,10 @@ export const FontStyle = (isDark=true) => {
 
         transition: all 0.4s ease;
 
+        .p-inputtext.p-invalid.p-component {
+            border-color: #e24c4c !important;
+        }
+
         .p-button {
             color: #ffffff;
             background: unset !important;
@@ -29,7 +33,7 @@ export const FontStyle = (isDark=true) => {
             ${fontGeneralColor}
             font-size: 25px !important;
             background-color: rgba(173, 80, 255, 0.1) !important;
-            border: unset !important;
+            border-color: transparent !important;
             border-radius: 19px !important;
         }
 
@@ -139,7 +143,7 @@ export const FontStyle = (isDark=true) => {
         }
 
         .contact-active{
-            opacity: 0;
+            transform: scale(0);
             transition: all 0.4s ease;
         }
 

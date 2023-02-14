@@ -15,6 +15,7 @@ import Javascript_Icon from "@/assets/svgComponents/Javascript_icon";
 import { InputText } from 'primereact/inputtext';
 import { InputTextarea } from 'primereact/inputtextarea';
 import { Button } from 'primereact/button';                
+import { useForm, Controller } from "react-hook-form";
         
 
 export default function Home() {
@@ -45,6 +46,19 @@ export default function Home() {
       }
     });
   },[])
+
+  const defaultValues = {
+    nombre: "",
+    email: "",
+    phone: "",
+    mensaje: ""
+  }
+
+  const { register, handleSubmit, watch, control,formState: { errors } } = useForm(defaultValues);
+
+  const submit = (data) => {
+    console.log("Data: ",data)
+  }
   
   return (
     <>
@@ -233,25 +247,42 @@ export default function Home() {
                 <div className="flex justify-content-center relative">
                     <img id="Contact" className="contact-active" src={isDark? "Contacto_Dark.png" : "Contacto_Light.png"}/>
                     <div id="Form-Cont" className="form-contact">
-                      <form className="grid gap-6 justify-content-between form-inputs">
-                        <InputText
-                          placeholder="Nombre*"
-                          className="col-5"
-                        />
-                        <InputText
-                          placeholder="Email*"
-                          className="col-5"
-                        />
-                        <InputText
-                          placeholder="Teléfono*"
-                          className="col-12"
-                        />
-                        <InputTextarea
-                          placeholder="Mensaje*"
-                          autoResize
-                          rows={5} 
-                          cols={150}
-                        />
+                      <form onSubmit={handleSubmit(submit)} className="grid gap-6 justify-content-between form-inputs">
+                        <Controller name={"nombre"} control={control} rules={{required: true, pattern:/^[a-zA-ZÀ-ÿ\u00f1\u00d1\s]+$/g}} render={({field,fieldState}) =>
+                          <InputText
+                            value={field.value}
+                            onInput={(e) => { field.onChange(e.target.value) }}
+                            placeholder="Nombre*"
+                            className={"col-5" + `${errors.nombre ? " p-invalid" : ""}`}
+                          />
+                        }/>
+                        <Controller name={"email"} control={control} rules={{required: true, pattern:/^(([^<>()\[\]\\.,;:\s@”]+(\.[^<>()\[\]\\.,;:\s@”]+)*)|(“.+”))@((\[[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}\.[0–9]{1,3}])|(([a-zA-Z\-0–9]+\.)+[a-zA-Z\s]{2,}))$/}} render={({field,fieldState}) =>
+                          <InputText
+                            value={field.value}
+                            onInput={(e) => { field.onChange(e.target.value) }}
+                            placeholder="Email*"
+                            className={"col-5" + `${errors.email ? " p-invalid" : ""}`}
+                          />
+                        }/>
+                        <Controller name={"phone"} control={control} rules={{required: true, pattern:/^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?[\d{1,9}\s]$/}} render={({field,fieldState}) =>
+                          <InputText
+                            value={field.value}
+                            onInput={(e) => { field.onChange(e.target.value) }}
+                            placeholder="Teléfono*"
+                            className={"col-12" + `${errors.phone ? " p-invalid" : ""}`}
+                          />
+                        }/>
+                        <Controller name={"mensaje"} control={control} rules={{required: true, pattern:/^[^|<>]*$/}} render={({field,fieldState}) =>
+                          <InputTextarea
+                            value={field.value}
+                            onInput={(e) => { field.onChange(e.target.value) }}
+                            placeholder="Mensaje*"
+                            autoResize
+                            rows={5} 
+                            cols={150}
+                            className={"col-12" + `${errors.mensaje ? " p-invalid" : ""}`}
+                          />
+                        }/>
                         <Button
                           label="Enviar"
                         />
