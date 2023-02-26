@@ -162,7 +162,51 @@ export const FontStyle = (isDark=true) => {
         }
 
         .form-inputs{
-            padding: 0rem 25rem;
+            max-width: 1108px;
+            width: 100%;
+            margin: 0 auto;
+
         }
+
+        .card-left{
+            margin-right: 35%;
+        }
+
+        .card-right{
+            margin-left: 35%;
+        }
+
+        .imageProject{
+            max-width: 46rem;
+        }
+        
+        @media(max-width: 1200px){
+            
+            .imageProject{
+                max-width: unset;
+            }
+
+            .first-section-title{
+                padding: 0 !important;
+            }
+
+            .container{
+                padding: 0rem 1.5rem;
+                padding-top: 5rem;
+
+                .card-project{
+                    max-width: unset !important;
+                }
+            }
+
+            .card-left{
+                margin-right: unset;
+            }
+    
+            .card-right{
+                margin-left: unset;
+            }
+        }
+
     `
 }

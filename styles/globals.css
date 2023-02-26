@@ -1,3 +1,15 @@
 body{
   margin: 0;
 }
+
+.sidebarMenuSB{
+  font-size: 20px;
+  color: #000000 !important;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+.sidebarMenuCVSB{
+  font-size: 20px;
+  color: #00BFFF !important;
+  font-family: 'Montserrat', sans-serif !important;
+}
