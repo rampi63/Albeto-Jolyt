@@ -40,7 +40,7 @@ export const FontStyle = (isDark=true) => {
         .p-component{
             ${fontFamily}
             ${fontGeneralColor}
-            font-size: 25px !important;
+            font-size: calc(1.1rem + 0.4vw) !important;
         }
 
         .p-button-label {
@@ -50,7 +50,7 @@ export const FontStyle = (isDark=true) => {
         .p-inputtext::placeholder{
             ${fontFamily}
             ${fontGeneralColor}
-            font-size: 25px !important;
+            font-size: calc(1.1rem + 0.4vw) !important;
         }
 
         .p-inputtext:enabled:focus {
@@ -66,19 +66,19 @@ export const FontStyle = (isDark=true) => {
         }
 
         h1{
-            font-size: 60px;
+            font-size: calc(1.8rem + 1.5vw);
         }
 
         h2{
-            font-size: 55px;
+            font-size: calc(2.3rem + 1vw);
         }
 
         h3{
-            font-size: 40px;
+            font-size: calc(1.8rem + 0.4vw);
         }
 
         h6{
-            font-size: 24px;
+            font-size: calc(1.1rem + 0.3vw);
         }
 
         .sidebarMenu{
@@ -92,7 +92,7 @@ export const FontStyle = (isDark=true) => {
         }
 
         .font-25{
-            font-size: 25px;
+            font-size: calc(1.1rem + 0.4vw);
         }
 
         .font-18{
@@ -206,6 +206,23 @@ export const FontStyle = (isDark=true) => {
             .card-right{
                 margin-left: unset;
             }
+        }
+
+        @media(max-width: 576px){
+            .container{
+                .tech-section{
+                    padding-top: 10rem;
+                }
+
+                .projects-section{
+                    padding-top: 10rem;
+
+                    .littleUp{
+                        padding-top: 5rem !important;
+                        gap: 10rem !important;
+                    }
+                }
+            }  
         }
 
     `

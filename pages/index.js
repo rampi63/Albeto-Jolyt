@@ -31,7 +31,7 @@ export default function Home() {
       let sc = window.pageYOffset
       //console.log(sc)
       if(sc >= 4596){
-        document.getElementById("Contact").className = "contact-active absolute"
+        //document.getElementById("Contact").className = "contact-active absolute"
         document.getElementById("Form-Cont").className = "form-contact-active w-full"
 
         // setTimeout(() => {
@@ -40,7 +40,7 @@ export default function Home() {
 
         //console.log("Me muestro")
       }else{
-        document.getElementById("Contact").className = "contact absolute flex w-full"
+        //document.getElementById("Contact").className = "contact absolute flex w-full"
         document.getElementById("Form-Cont").className = "form-contact w-full"
         //console.log("No me muestro")
       }
@@ -85,6 +85,33 @@ export default function Home() {
           emailjs.init('Mn39zD7EpoNEUi7i1')
         </script>
       </Head>
+      <style global jsx>
+        {`
+          body{
+            background-color: ${isDark? "#1E1C29 !important;" : "#EAEAEE !important;"};
+          }
+
+          .sidebarMenuSB{
+            font-size: 20px;
+            color: ${isDark? "#FFFFFF !important;" : "#000000 !important;"};
+            font-family: 'Montserrat', sans-serif !important;
+          }
+          
+          .sidebarMenuCVSB{
+            font-size: 20px;
+            color: #00BFFF !important;
+            font-family: 'Montserrat', sans-serif !important;
+          }
+          
+          .p-sidebar {
+            background: ${isDark? "#1E1C29 !important;" : "#EAEAEE !important;"};
+            color: #495057;
+            border: 0 none;
+            box-shadow: 0 1px 3px rgb(0 0 0 / 30%);
+          }
+
+        `}
+      </style>
       <div className={FontStyle(isDark)}>
         <div className="bgAll">
           <div className="banner">
@@ -185,7 +212,7 @@ export default function Home() {
                 <h2 className="text-center font-bold m-0">
                   Mis proyectos
                 </h2>
-                <div className="flex flex-column justify-content-center " style={{paddingTop: "12rem", gap: "25rem"}}>
+                <div className="flex flex-column justify-content-center littleUp" style={{paddingTop: "12rem", gap: "25rem"}}>
                   
                   <div className="flex xl:flex-row flex-column w-full relative justify-content-center xl:gap-0 gap-6">
                     <div className="mt-6 xl:absolute card-left" style={{zIndex:"4"}}>
@@ -253,11 +280,14 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="flex flex-column mt-8" style={{marginBottom:"25rem"}}>
+              <div className="flex flex-column mt-8" style={{marginBottom:"5rem"}}>
                 <div className="flex justify-content-center relative">
-                    <img id="Contact" className="contact-active" src={isDark? "Contacto_Dark.png" : "Contacto_Light.png"}/>
+                    {/* <img id="Contact" className="contact-active" src={isDark? "Contacto_Dark.png" : "Contacto_Light.png"}/> */}
                     <div id="Form-Cont" className="form-contact">
                       <form onSubmit={handleSubmit(submit)} className="grid gap-6 justify-content-between form-inputs">
+                        <div className="col-12 flex justify-content-center">
+                          <img id="Contact" className="contact md:w-6 w-full mb-6" src={isDark? "Contacto_Dark.png" : "Contacto_Light.png"}/>
+                        </div>
                         <Controller name={"nombre"} control={control} rules={{required: true, pattern:/^[a-zA-ZÀ-ÿ\u00f1\u00d1\s]+$/g}} render={({field,fieldState}) =>
                           <InputText
                             value={field.value}

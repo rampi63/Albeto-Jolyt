@@ -29,13 +29,13 @@ const Header = ({isDark=true,setIsDark}) => {
             <Sidebar visible={visible} position="right" onHide={() => setVisible(false)}>
                 <div className="flex flex-column-reverse gap-6">
                     <nav className="gap-3 flex-column flex">
-                        <a className="sidebarMenuSB cursor-pointer" style={{textDecorationLine:"unset"}}  href="#tech">
+                        <a onClick={() => setVisible(false)} className="sidebarMenuSB cursor-pointer" style={{textDecorationLine:"unset"}}  href="#tech">
                             Tecnologías
                         </a>
-                        <a className="sidebarMenuSB cursor-pointer" style={{textDecorationLine:"unset"}} href="#projects">
+                        <a onClick={() => setVisible(false)} className="sidebarMenuSB cursor-pointer" style={{textDecorationLine:"unset"}} href="#projects">
                             Proyectos
                         </a>
-                        <div className="sidebarMenuCVSB cursor-pointer" style={{color:"#00BFF"}}>
+                        <div onClick={() => setVisible(false)} className="sidebarMenuCVSB cursor-pointer" style={{color:"#00BFF"}}>
                             Descargar CV
                         </div>
                     </nav>
