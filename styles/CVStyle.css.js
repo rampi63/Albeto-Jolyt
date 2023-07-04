@@ -1,7 +1,7 @@
 import { css } from "@emotion/css";
 import bg from "../assets/imgNext/Background.png"
 
-export const FontStyle = (isDark=true) => {
+export const CVStyle = (isDark=true) => {
 
     let fontFamily = "font-family: 'Montserrat', sans-serif !important;"
     let fontGeneralColor = isDark? "color: #FFFFFF !important;" : "color: #000000 !important;"
@@ -179,8 +179,16 @@ export const FontStyle = (isDark=true) => {
         .imageProject{
             max-width: 46rem;
         }
+
+        .marginInXL{
+            margin-bottom: 85rem;
+        }
         
         @media(max-width: 1200px){
+
+            .marginInXL{
+                margin-bottom: unset !important;
+            }
             
             .imageProject{
                 max-width: unset;

@@ -5,7 +5,7 @@ import "primeicons/primeicons.css";
 
 import Head from "next/head";
 import Header from "@/components/Header";
-import { FontStyle } from "@/styles/fonts.css";
+import { CVStyle } from "@/styles/CVStyle.css";
 import { useEffect, useState } from "react";
 import Apollo_Icon from "@/assets/svgComponents/Apollo";
 import S3_Icon from "@/assets/svgComponents/AWS_S3";
@@ -21,6 +21,11 @@ import { useForm, Controller } from "react-hook-form";
 export default function Home() {
   
   const [isDark,setIsDark] = useState()
+  const [readMore,setReadMore] = useState({
+    mango: false,
+    abastero: false,
+    venn: false
+  })
 
   useEffect(() => {
     setIsDark(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? true : false)
@@ -29,20 +34,10 @@ export default function Home() {
   useEffect(() => {
     window.addEventListener("scroll", () => {
       let sc = window.pageYOffset
-      //console.log(sc)
       if(sc >= 4596){
-        //document.getElementById("Contact").className = "contact-active absolute"
         document.getElementById("Form-Cont").className = "form-contact-active w-full"
-
-        // setTimeout(() => {
-        //   document.getElementById("Contact").className = "contact-active absolute hidden"
-        // },400)
-
-        //console.log("Me muestro")
       }else{
-        //document.getElementById("Contact").className = "contact absolute flex w-full"
         document.getElementById("Form-Cont").className = "form-contact w-full"
-        //console.log("No me muestro")
       }
     });
   },[])
@@ -110,9 +105,13 @@ export default function Home() {
             box-shadow: 0 1px 3px rgb(0 0 0 / 30%);
           }
 
+          .p-sidebar-close-icon{
+            color: ${isDark? "#FFFFFF !important;" : "#000000 !important;"};
+          }
+
         `}
       </style>
-      <div className={FontStyle(isDark)}>
+      <div className={CVStyle(isDark)}>
         <div className="bgAll">
           <div className="banner">
             <Header isDark={isDark} setIsDark={setIsDark}/>
@@ -214,7 +213,7 @@ export default function Home() {
                 </h2>
                 <div className="flex flex-column justify-content-center littleUp" style={{paddingTop: "12rem", gap: "25rem"}}>
                   
-                  <div className="flex xl:flex-row flex-column w-full relative justify-content-center xl:gap-0 gap-6">
+                  <div className={`${readMore.mango ? "marginInXL" : ""}` + " flex xl:flex-row flex-column w-full relative justify-content-center xl:gap-0 gap-6"}>
                     <div className="mt-6 xl:absolute card-left" style={{zIndex:"4"}}>
                       <div className="font-semibold" style={{color:"#00BFFF !important"}}>
                         Full Stack Developer 
@@ -223,8 +222,43 @@ export default function Home() {
                         Mango pase
                       </h3>
                       <div className="card-project mt-4">
+                        {
+                          readMore.mango &&
+                          <>
+                            <h6 className="font-normal m-0 mb-3">
+                              <span style={{color: "#00BFFF"}}>Tecnologías utilizadas: </span>React, Laravel, Docker, AWS Amplify,  AWS S3,  AWS Lambda, MercadoPago, React Router, postgreSQL.
+                            </h6>
+
+                            <h6 className="font-normal m-0 mb-3">
+                              <span style={{color: "#00BFFF"}}>Duración del proyecto: </span>7 meses.
+                            </h6>
+                          </>
+                        }
                         <h6 className="font-normal m-0">
-                          Mango Pase es una solución innovadora para la compra y venta de boletos en línea para cualquier tipo de evento social. Ya sean eventos deportivos, conciertos, conferencias, festivales, etc.
+                         <span className={readMore.mango? "" : "hidden"} style={{color: "#00BFFF !important"}}>Descripción del proyecto: </span>Mango Pase es una solución innovadora para la compra y venta de boletos en línea para cualquier tipo de evento social. Ya sean eventos deportivos, conciertos, conferencias, festivales, etc.
+                        </h6>
+                        {
+                          readMore.mango &&
+                          <>
+                            <h6 className="font-normal m-0 my-3">
+                              <span style={{color: "#00BFFF"}}>Objetivos del proyecto: </span>Crear una plataforma web altamente personalizable para la creación y gestión de eventos sociales. Con un enfoque en la flexibilidad, ofreciendo una variedad de opciones de boletos, cupones de descuento, venta de productos relacionados al evento y personalización del formulario de registro para adaptarse a las necesidades únicas de los organizadores de eventos. Además de implementar un sistema de gestión de transacciones y boletos fácil de usar, así como un checkout optimizado mediante la integración de tecnologías de Mercado Pago para un proceso de compra rápido y sencillo. 
+                            </h6>
+
+                            <h6 className="font-normal m-0 mb-3">
+                              <span style={{color: "#00BFFF"}}>Desafios y soluciones: </span>En este proyecto, enfrenté desafíos significativos en el desarrollo web. El principal desafío fue implementar la aplicación en un servicio de nube escalable como AWS, lo que me obligó a aprender y resolver problemas al mismo tiempo. Además, tuve que superar la complejidad de crear PDFs personalizados para los boletos mediante la implementación de React PDF. La creación de un checkout optimizado mediante tecnologías de Mercado Pago también presentó desafíos debido a la escasa documentación disponible. También tuve que desarrollar la capacidad de imprimir boletos en impresoras de calor para la instanciación de una taquilla física en los recintos de eventos. Además de esto, me tocó liderar y gestionar el proyecto desde principio a fin, a su vez, comunicarme con el cliente y mis superiores para alcanzar los resultados esperados. 
+                            </h6>
+
+                            <h6 className="font-normal m-0 mb-3">
+                              <span style={{color: "#00BFFF"}}>Resultados obtenidos: </span>Una página totalmente competitiva e intuitiva para la compra y venta de boletos para eventos sociales con un constante flujo de usuarios diarios y una cantidad de emisiones de boletos diarios considerables a través de todos los eventos actuales en cuestión. 
+                            </h6>
+
+                            <h6 className="font-normal m-0 mb-3">
+                              <span style={{color: "#00BFFF"}}>Habilidades demostradas: </span>Habilidades de liderazgo, desarrollo en React con diferentes librerías como React Router o React PDF, desarrollo en Laravel,  organización y planificación de tareas y entregables, diseño y usabilidad. 
+                            </h6>
+                          </>
+                        }
+                        <h6 className={"font-normal m-0 mt-6 cursor-pointer"} onClick={() => setReadMore({...readMore,mango: !readMore.mango})} style={{color: "#00CAB1 !important;"}}>
+                          {!readMore.mango? "Leer más..." : "Ocultar"}
                         </h6>
                       </div>
                     </div>
@@ -261,7 +295,7 @@ export default function Home() {
                       <div className="font-semibold" style={{color:"#00BFFF !important"}}>
                         Front End Developer
                       </div>
-                      <h3 className="font-bold m-0" onClick={() => scrollToTop()}>
+                      <h3 className="font-bold m-0">
                         Abastero
                       </h3>
                       <div className="card-project mt-4">

@@ -9,6 +9,13 @@ const Header = ({isDark=true,setIsDark}) => {
 
     return(
         <header className="w-full flex align-items-center sm:justify-content-around justify-content-between sm:px-0 px-5" style={{height:"100px"}}>
+            <style global jsx>
+            {`
+                body{
+                    overflow-y: ${visible? "hidden" : "unset"} !important;
+                }
+            `}
+            </style>
             <div>
                 <Logo/>
             </div>
