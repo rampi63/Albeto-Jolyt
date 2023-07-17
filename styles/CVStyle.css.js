@@ -1,12 +1,12 @@
 import { css } from "@emotion/css";
 import bg from "../assets/imgNext/Background.png"
 
-export const CVStyle = (isDark=true) => {
+export const CVStyle = (isDark = true) => {
 
     let fontFamily = "font-family: 'Montserrat', sans-serif !important;"
-    let fontGeneralColor = isDark? "color: #FFFFFF !important;" : "color: #000000 !important;"
-    let bgColor = isDark? "#1E1C29;" : "#EAEAEE;"
-    let banner = isDark? "linear-gradient(to bottom, rgb(245 246 252 / 0%), rgb(30, 28, 41)), url(Background.png);" : "linear-gradient(to bottom, rgb(245 246 252 / 0%), rgb(234, 234, 238)), url(Background.png);"
+    let fontGeneralColor = isDark ? "color: #FFFFFF !important;" : "color: #000000 !important;"
+    let bgColor = isDark ? "#1E1C29;" : "#EAEAEE;"
+    let banner = isDark ? "linear-gradient(to bottom, rgb(245 246 252 / 0%), rgb(30, 28, 41)), url(Background.png);" : "linear-gradient(to bottom, rgb(245 246 252 / 0%), rgb(234, 234, 238)), url(Background.png);"
 
     return css`
 
@@ -231,6 +231,48 @@ export const CVStyle = (isDark=true) => {
                     }
                 }
             }  
+        }
+
+        //Para descargar el PDF
+
+        .CV{
+            display: none;
+
+            .cardProfile {
+                max-width: 46rem;
+                height: auto;
+                padding: 2.5rem 2rem;
+                border-radius: 14px;
+                font-size: 1rem;
+                background: ${isDark ? "#262639e0" : "#EAEAEEe0"};
+                -webkit-backdrop-filter: blur(5px);
+                backdrop-filter: blur(5px);
+                background-image: linear-gradient(315deg, #144ee30a 35%, #763cac2e 100%);
+            }
+        }
+
+        @media print {
+            .bgAll{
+                display: none !important;
+            }
+
+            .CV{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                
+                .cardProfile {
+                    width: 100%;
+                    height: auto;
+                    padding: 2rem;
+                    border-radius: 14px;
+                    font-size: 1rem;
+                    background: ${isDark ? "#262639e0" : "#EAEAEEe0"};
+                    -webkit-backdrop-filter: blur(5px);
+                    backdrop-filter: blur(5px);
+                    background-image: linear-gradient(315deg, #144ee30a 35%, #763cac2e 100%);
+                }
+            }
         }
 
     `
