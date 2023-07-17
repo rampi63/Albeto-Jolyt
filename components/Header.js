@@ -38,7 +38,7 @@ const Header = ({ isDark = true, setIsDark }) => {
                             <a className="sidebarMenu cursor-pointer" style={{ textDecorationLine: "unset" }} href="#projects">
                                 Proyectos
                             </a>
-                            <div className="sidebarMenuCV cursor-pointer" style={{ color: "#00BFF" }} onClick={() => window.open("/downloadCV")}>
+                            <div className="sidebarMenuCV cursor-pointer" style={{ color: "#00BFF" }} onClick={() => window.print()}>
                                 Descargar CV
                             </div>
                         </>
