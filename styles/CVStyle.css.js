@@ -260,6 +260,7 @@ export const CVStyle = (isDark = true) => {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                break-inside: avoid;
                 
                 .cardProfile {
                     width: 100%;
