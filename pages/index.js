@@ -456,7 +456,7 @@ export default function Home() {
               Sobre mi
             </h3>
             <p>
-              Con una experiencia de 2 años en desarrollo web, habilidades en React y Laravel, destaco por mi capacidad de liderazgo en proyectos, habilidad para conectar con clientes y entender sus necesidades, habilidades técnicas en desarrollo web.
+              Con una experiencia de 3 años en desarrollo web, habilidades en React y Laravel, destaco por mi capacidad de liderazgo en proyectos, habilidad para conectar con clientes y entender sus necesidades, habilidades técnicas en desarrollo web.
             </p>
             <p>
               Mi ágil aprendizaje me permite adaptarme rápidamente a nuevas tecnologías y tendencias en la industria, lo que me hace estar siempre actualizado y ofrecer soluciones innovadoras.  Me entusiasma aprender y especializarme en liderazgo de proyectos para contribuir al crecimiento y éxito de un equipo y una empresa.
@@ -572,10 +572,10 @@ export default function Home() {
                     <div className="" style={{ width: "75%", background: "#3BD388", height: "1.5rem", borderRadius: "50px" }}>
                       <div className="flex w-full justify-content-between">
                         <div className="pl-2" style={{ color: "black", fontWeight: "700" }}>
-                          Next JS
+                          Java 8
                         </div>
                         <div className="pr-2" style={{ color: "black", fontWeight: "700" }}>
-                          75%
+                          85%
                         </div>
                       </div>
                     </div>
@@ -608,26 +608,26 @@ export default function Home() {
                   </div>
 
                   <div className="w-full" style={{ height: "1.5rem", background: "transparent", border: "1px solid #3BD388", borderRadius: "50px" }}>
-                    <div className="" style={{ width: "65%", background: "#3BD388", height: "1.5rem", borderRadius: "50px" }}>
+                    <div className="" style={{ width: "85%", background: "#3BD388", height: "1.5rem", borderRadius: "50px" }}>
                       <div className="flex w-full justify-content-between">
                         <div className="pl-2" style={{ color: "black", fontWeight: "700" }}>
                           Laravel
                         </div>
                         <div className="pr-2" style={{ color: "black", fontWeight: "700" }}>
-                          65%
+                          85%
                         </div>
                       </div>
                     </div>
                   </div>
 
                   <div className="w-full" style={{ height: "1.5rem", background: "transparent", border: "1px solid #3BD388", borderRadius: "50px" }}>
-                    <div className="" style={{ width: "65%", background: "#3BD388", height: "1.5rem", borderRadius: "50px" }}>
+                    <div className="" style={{ width: "85%", background: "#3BD388", height: "1.5rem", borderRadius: "50px" }}>
                       <div className="flex w-full justify-content-between">
                         <div className="pl-2" style={{ color: "black", fontWeight: "700" }}>
                           SQL
                         </div>
                         <div className="pr-2" style={{ color: "black", fontWeight: "700" }}>
-                          65%
+                          85%
                         </div>
                       </div>
                     </div>
@@ -671,7 +671,7 @@ export default function Home() {
                   </h6>
 
                   <h6 className="font-normal m-0 mb-3">
-                    <span style={{ color: "#00BFFF" }}>Duración del proyecto: </span>11 meses.
+                    <span style={{ color: "#00BFFF" }}>Duración del proyecto: </span>2 años.
                   </h6>
                   <h6 className="font-normal m-0">
                     <span style={{ color: "#00BFFF !important" }}>Descripción del proyecto: </span>Mango Pase es una solución innovadora para la compra y venta de boletos en línea para cualquier tipo de evento social. Ya sean eventos deportivos, conciertos, conferencias, festivales, etc.
@@ -688,9 +688,9 @@ export default function Home() {
                     <span style={{ color: "#00BFFF" }}>Resultados obtenidos: </span>Una página totalmente competitiva e intuitiva para la compra y venta de boletos para eventos sociales con un constante flujo de usuarios diarios y una cantidad de emisiones de boletos diarios considerables a través de todos los eventos actuales en cuestión.
                   </h6>
 
-                  {/* <h6 className="font-normal m-0 mb-3">
+                  <h6 className="font-normal m-0 mb-3">
                     <span style={{ color: "#00BFFF" }}>Habilidades demostradas: </span>Habilidades de liderazgo, desarrollo en React con diferentes librerías como React Router o React PDF, desarrollo en Laravel,  organización y planificación de tareas y entregables, diseño y usabilidad.
-                  </h6> */}
+                  </h6>
                 </div>
               </div>
             </div>
@@ -714,7 +714,7 @@ export default function Home() {
                   </h6>
 
                   <h6 className="font-normal m-0 mb-3">
-                    <span style={{ color: "#00BFFF" }}>Tiempo de contribución: </span>De Marzo 2022 a Agosto 2022.
+                    <span style={{ color: "#00BFFF" }}>Tiempo de contribución: </span>6 meses.
                   </h6>
                   <h6 className="font-normal m-0">
                     <span style={{ color: "#00BFFF !important" }}>Descripción del proyecto: </span>Venn es una plataforma revolucionaria para maestros y profesores que ofrece una amplia variedad de opciones para brindar servicios educativos personalizados. Con Venn, los maestros pueden ofrecer Consultorías 1:1, Sesiones Live y Cursos Online Pre-Grabados, lo que permite a los estudiantes acceder a una amplia variedad de contenido educativo y desarrollarse profesionalmente de manera eficiente y efectiva.
@@ -731,9 +731,9 @@ export default function Home() {
                     <span style={{ color: "#00BFFF" }}>Resultados obtenidos: </span>Mi colaboración en este proyecto fue breve pero impactante. En solo 8 meses, logré grandes avances en el proyecto. Me enorgullece haber contribuido en la creación de una interfaz de usuario amigable y en la integración de gráficos y métricas para una mejor comprensión del rendimiento del proyecto. También fui crucial en la depuración de bugs y errores en la plataforma, lo que llevó a una experiencia de usuario superior.
                   </h6>
 
-                  {/* <h6 className="font-normal m-0 mb-3">
+                  <h6 className="font-normal m-0 mb-3">
                     <span style={{ color: "#00BFFF" }}>Habilidades demostradas: </span> Desarrollo en React, depuración de múltiples bugs, diseño y usabilidad
-                  </h6> */}
+                  </h6>
                 </div>
               </div>
             </div>
