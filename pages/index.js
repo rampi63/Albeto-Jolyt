@@ -572,10 +572,10 @@ export default function Home() {
                     <div className="" style={{ width: "75%", background: "#3BD388", height: "1.5rem", borderRadius: "50px" }}>
                       <div className="flex w-full justify-content-between">
                         <div className="pl-2" style={{ color: "black", fontWeight: "700" }}>
-                          Java 8
+                          Next JS
                         </div>
                         <div className="pr-2" style={{ color: "black", fontWeight: "700" }}>
-                          85%
+                          75%
                         </div>
                       </div>
                     </div>
