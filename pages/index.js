@@ -230,7 +230,7 @@ export default function Home() {
                             </h6>
 
                             <h6 className="font-normal m-0 mb-3">
-                              <span style={{ color: "#00BFFF" }}>Duración del proyecto: </span>11 meses.
+                              <span style={{ color: "#00BFFF" }}>Duración del proyecto: </span>2 años.
                             </h6>
                           </>
                         }
